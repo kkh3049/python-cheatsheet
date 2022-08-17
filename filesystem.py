@@ -8,3 +8,7 @@ def get_filename_from_filepath(filepath: str):
   """ Path/to/file.tar.gz => file.tar """
   from pathlib import Path
   return Path(filepath).stem
+
+def get_relative_path(from: str, to: str):
+  import os
+  return os.path.relpath(to, start=from)
